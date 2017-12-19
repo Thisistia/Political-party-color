@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //序數 比例尺
+
+        var index = ["中國國民黨", "民主進步黨", "時代力量", "無黨團結聯盟", "親民黨"];
+        var color = ["blue", "green", "yellow", "grey", "orange"]
+
+        var xScale = d3.scale.ordinal()
+            .domain(index)
+            .range(color);
+
+        console.log(xScale("民進黨"));
+        console.log(xScale("時代力量"));
+        console.log(xScale("無黨團結聯盟"));
+        console.log(xScale("共產黨"));
+
+        //如果輸入名稱不是上面五種政黨，則會按照順序給予顏色。
+        //解決方法：自訂各種可能的序數比例尺
+
+    </script>
+</body>
+
+</html>
